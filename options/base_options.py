@@ -15,7 +15,6 @@ class BaseOptions():
         self.parser.add_argument('--checkpoints_dir', type=str, default='checkpoints/', help='models are saved here')
         self.parser.add_argument('--audio_model', type=str, default='AudioNet', help='audio model type')
         self.parser.add_argument('--visual_model', type=str, choices=['VisualNet', 'VisualNetDilated'], default='VisualNetDilated', help='visual model type')
-        self.parser.add_argument('--fusion_model', type=str, choices=['none', 'AssoConv', 'APNet'], default='none', help='fusion model type')
         self.parser.add_argument('--batchSize', type=int, default=32, help='input batch size')
         self.parser.add_argument('--nThreads', default=16, type=int, help='# threads for loading data')
         self.parser.add_argument('--audio_sampling_rate', default=16000, type=int, help='audio sampling rate')
