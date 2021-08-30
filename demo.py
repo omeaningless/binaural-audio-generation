@@ -120,7 +120,6 @@ def main():
             frame_index = int(round((((sliding_window_start + samples_per_window / 2.0) / audio.shape[-1]) * opt.input_audio_length + 0.05) * 10 ))
             image = Image.open(os.path.join(video_frame_path, str(frame_index) + '.jpg')).convert('RGB')
             #image = image.transpose(Image.FLIP_LEFT_RIGHT)
-            print('sliding',sliding_window_start, 'slidinge',sliding_window_start + samples_per_window,'shape', audio.shape[-1],'index',frame_index)
             frame = vision_transform(image).unsqueeze(0) #unsqueeze to add a batch dimension
             # data to device
             audio_diff = audio_diff.to(opt.device)
