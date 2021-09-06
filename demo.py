@@ -201,6 +201,7 @@ def main():
             os.mkdir(cur_output_dir_root)
 
         mixed_mono = (audio_channel1 + audio_channel2) / 2
+	predicted_binaural_audio = np.asfortranarray(predicted_binaural_audio)
         librosa.output.write_wav(os.path.join(cur_output_dir_root, 'predicted_binaural.wav'), predicted_binaural_audio, opt.audio_sampling_rate)
         librosa.output.write_wav(os.path.join(cur_output_dir_root, 'mixed_mono.wav'), mixed_mono, opt.audio_sampling_rate)
         librosa.output.write_wav(os.path.join(cur_output_dir_root, 'input_binaural.wav'), audio, opt.audio_sampling_rate)
