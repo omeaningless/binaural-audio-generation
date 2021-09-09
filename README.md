@@ -22,7 +22,7 @@
 ```bash
 ./test.sh
 ```
-
+A set of pretrained weights can be found at https://drive.google.com/drive/folders/1N7UMOZqNbFe_QXx4x_kKH02CQI8_DwPa.
 
 
 ## Acknowledgement
