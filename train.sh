@@ -13,7 +13,6 @@ python train.py --name split8 \
     --validation_on \
     --validation_freq 93 \
     --validation_batches 50 \
-    --fusion_model APNet \
     --stereo_loss_weight 44 \
     --val_return_key stereo_loss_fusion \
     --tensorboard True |& tee -a logs/split8.log
